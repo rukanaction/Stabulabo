@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<!--ビューポイントの設定-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>スタバラボ</title>
+	<link rel="stylesheet" href="style.css">
+
+	<!--faviconの設定-->
+	<link rel="icon" href="images/nav_icon01.png">
+
+	<!--フォントの設定-->
+	<!--A-OTF 太ゴB101 Pr6N-->
+	<script>
+		(function(d) {
+			var config = {
+					kitId: 'scc1uds',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function() {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function() {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+
+	<!--小塚ゴシック Pr6N R-->
+	<script>
+		(function(d) {
+			var config = {
+					kitId: 'scc1uds',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function() {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function() {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+
+</head>
+
+<body>
+	<header>
+		<div class="wave"><img src="images/nav.png" alt="wave" width="100%"></div>
+		<div class="top wrapper">
+			<nav>
+				<ul>
+					<div>
+						<img src="images/nav_icon01.png" alt="" width="80">
+						<li><a href="#about">スタバラボについて</a></li>
+					</div>
+					<div>
+						<img src="images/nav_icon02.png" alt="" width="80">
+						<li><a href="#feeling">今の気分は？</a></li>
+					</div>
+					<div>
+						<img src="images/nav_icon03.png" alt="" width="80">
+						<li><a href="#topic">ツウなはなし</a></li>
+					</div>
+					<div>
+						<img src="images/nav_icon04.png" alt="" width="80">
+						<li><a href="#recommend">季節のおすすめ</a></li>
+					</div>
+
+				</ul>
+			</nav>
+			<div class="logo">
+				<img src="images/logo.png" alt="" width="130">
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="about wrapper" id="about">
+			<h2><span class="outline">スタバラボ</span>って？</h2>
+			<p>「スターバックスのメニューって多すぎて分かりづらい」<br>
+				「おすすめのカスタマイズを教えてほしい！」など<br>
+				あなたの悩みから生まれた <span class="underline">あなただけの一杯</span> を研究している研究所。<br>
+				カスタマイズ辞典や知っていたらちょっとツウになれちゃうような話など<br>
+				あなただけのとっておきの一杯をご提案します。</p>
+		</section>
+		<section class="feeling wrapper" id="feeling">
+			<h3>How are you feeling now?</h3>
+			<h2>今の気分は？</h2>
+			<h3>ビバレッジを今の気分に合わせて
+				カスタマイズしてみませんか？</h3>
+			<div class="container">
+				<div class="travel">
+					<h4>TRAVEL</h4>
+					<h3>休日のお出かけ</h3>
+					<p>久しぶりの休日のお出かけの楽しい時間と共に。</p>
+				</div>
+				<div class="home">
+					<h4>HOME</h4>
+					<h3>家でまったり</h3>
+					<p>家で久しぶりの休日を過ごす時間と共に。</p>
+				</div>
+				<div class="work">
+					<h4>WORK</h4>
+					<h3>集中したい</h3>
+					<p>終わらせたい仕事や課題があるときと共に。</p>
+				</div>
+			</div>
+		</section>
+		<section class="topic wrapper" id="topic">
+			<div class="description">
+				<img src="images/coffee_icon_01.png" alt="">
+				<p>知っていたらスタバツウになれるかも？<br>
+					知る人ぞ知る“ツウなはなし”を<br>
+					スタバラボだけで教えます。</p>
+			</div>
+		</section>
+		<section class="recommend wrapper" id="recommend">
+			<h3>RECCOMEND</h3>
+			<h4>寒い冬におすすめのカスタマイズを紹介</h4>
+			<div class="primary">
+				<div class="upper">
+					<div class="remommend_01">
+						<div class="number">
+							<img src="images/number_01.png" alt="">
+						</div>
+						<img src="images/recommend_01.png" alt="">
+					</div>
+					<div class="remommend02">
+						<div class="number">
+							<img src="images/number_02.png" alt="">
+						</div>
+						<img src="images/recommend_02.png" alt="">
+					</div>
+				</div>
+				<div class="lower">
+					<div class="remommend03">
+						<div class="number">
+							<img src="images/number_03.png" alt="">
+						</div>
+						<img src="images/recommend_03.png" alt="">
+					</div>
+					<div class="remommend04">
+						<div class="number">
+							<img src="images/number_04.png" alt="">
+						</div>
+						<img src="images/recommend_04.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div class="footer wrapper">
+		<div class="footerlogo wrapper"><img src="images/footerlogo.png" alt="ロゴ" width="300"></div>
+		<p　class="footerlast">&copy; 2020 rukanaction. All Rights Reserved.</p>
+	</div>
+</body>
+
+</html>

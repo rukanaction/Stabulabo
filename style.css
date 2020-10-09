@@ -1,0 +1,159 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*bodyについて*/
+body {
+	background-color: #e8e8e8;
+	font-family: "03スマートフォントUI";
+	font-weight: lighter;
+}
+
+/*headerについて*/
+.wave {
+	position: fixed;
+}
+
+/*wrapperについて*/
+.wrapper {
+	width: 1020px;
+	margin: 0 auto;
+	outline: 1px solid #222;
+}
+
+/*topについて*/
+.top {
+	background: #d0fff0;
+}
+
+/*navについて*/
+nav {
+	position: fixed;
+	z-index: 6;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+/*logoについて*/
+.logo {
+	text-align: right;
+}
+
+/*aboutについて*/
+.about {
+	background: #fff;
+	font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+	margin-top: 150px;
+}
+
+.about h2 {
+	font-size: 40px;
+	padding: 20px;
+}
+
+.about p {
+	font-size: 18px;
+	line-height: 40px;
+	padding-bottom: 30px;
+}
+
+.outline {
+	font-family: "03スマートフォントUI";
+	font-weight: lighter;
+	display: inline-block;
+	color: #ffffff;
+	/* 文字の色 */
+	font-size: 40pt;
+	/* 文字のサイズ */
+	letter-spacing: 2px;
+	/* 文字間 */
+	text-shadow:
+		1px 1px 0px #000000,
+		-1px 1px 0px #000000,
+		1px -1px 0px #000000,
+		-1px -1px 0px #000000,
+		1px 0px 0px #000000,
+		0px 1px 0px #000000,
+		-1px 0px 0px #000000,
+		0px -1px 0px #000000;
+	/* 文字の影 */
+
+}
+
+.underline {
+	border: 0.5px solid #000;
+	background-color: #d0fff0;
+	padding: 2px;
+}
+
+/*feelingについて*/
+.feeling {
+	background: #d0fff0;
+	text-align: center;
+	margin-top: 150px;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+/*topicについて*/
+.topic {
+	background: url(images/wave_white.png);
+	outline: none;
+	margin-top: 150px;
+}
+
+.topic p {
+	font-family: kozuka-gothic-pro, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.description {
+	display: flex;
+}
+
+/*recommendについて*/
+.recommend {
+	outline: none;
+	text-align: center;
+	margin-top: 150px;
+}
+
+.primary {}
+
+.upper {
+	display: inline-flex;
+	justify-content: space-around;
+}
+
+.lower {
+	display: inline-flex;
+	justify-content: space-around;
+}
+
+.number {
+	position: absolute;
+}
+
+.frame {}
+
+/*footerについて*/
+.footer {
+	background: #d0fff0;
+	text-align: center;
+}
