@@ -13,6 +13,11 @@ body {
 /*headerについて*/
 .wave {
 	position: fixed;
+	z-index: 1000;
+}
+
+.logo{
+	padding: 140px 30px 80px 0;
 }
 
 /*wrapperについて*/
@@ -25,12 +30,13 @@ body {
 /*topについて*/
 .top {
 	background: #d0fff0;
+	height: 700px;
 }
 
 /*navについて*/
 nav {
 	position: fixed;
-	z-index: 6;
+	z-index: 10000;
 }
 
 ul {
@@ -38,14 +44,89 @@ ul {
 	display: flex;
 }
 
-a {
+#gNav {
+	top: 10px;
+	margin-left: 170px;
+}
+
+#gNav ul li a {
 	text-decoration: none;
 	color: #222;
+	display: block;
+	text-align: center;
+}
+
+#gNav ul li a .move {
+	transition: 0.3s ease-in-out;
+}
+
+#gNav ul li a .txt {
+	display: block;
+}
+
+.list01{
+	margin-right: 60px;
+}
+
+.list02{
+	margin-right: 83px;
+}
+.list03{
+	margin-right: 75px;
+}
+
+.list a{
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.list a::after {
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #333;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition: transform .3s;
+}
+
+.list a:hover::after {
+	transform: scale(1, 1);
+}
+
+.list a:hover .move {
+	transition: opacity 0.5s;
+	transform: rotateZ( 20deg ) ;
+}
+
+.slider{
+	position: relative;
+	top: 280px;
+	z-index: 30;
+}
+
+.space{
+	padding: 40px;
 }
 
 /*logoについて*/
 .logo {
-	text-align: right;
+	position: absolute;
+	top: 5px;
+	right: 220px;
+	z-index: 400;
+}
+
+.frappuccino{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 400;
 }
 
 /*aboutについて*/
@@ -56,23 +137,24 @@ a {
 	font-weight: 500;
 	text-align: center;
 	margin-top: 150px;
+	position: relative;
 }
 
 .about h2 {
-	font-size: 40px;
-	padding: 20px;
+	font-size: 45px;
+	padding: 25px 0px 10px 0px;
 }
 
 .about p {
 	font-size: 18px;
 	line-height: 40px;
-	padding-bottom: 30px;
+	padding-bottom: 25px;
 }
 
 .outline {
 	font-family: "03スマートフォントUI";
 	font-weight: lighter;
-	display: inline-block;
+	display: inline;
 	color: #ffffff;
 	/* 文字の色 */
 	font-size: 40pt;
@@ -95,7 +177,21 @@ a {
 .underline {
 	border: 0.5px solid #000;
 	background-color: #d0fff0;
-	padding: 2px;
+	padding: 3px;
+}
+
+.icon01{
+	position: absolute;
+	top: -40px;
+	left: -40px;
+}
+
+.icon02{
+	position: absolute;
+	bottom: -30px;
+	right: -20px;
+	transform: rotate( 20deg );
+	
 }
 
 /*feelingについて*/
@@ -103,11 +199,76 @@ a {
 	background: #d0fff0;
 	text-align: center;
 	margin-top: 150px;
+	font-weight: lighter;
+}
+
+.feeling_title h3{
+	font-size: 20px;
+	font-weight: lighter;
+	padding: 35px 0 15px 0;
+}
+
+.feeling_title h2{
+	font-size: 35px;
+	font-weight: lighter;
+}
+
+.feeling_title h4{
+	font-size: 18px;
+	font-weight: lighter;
+	padding: 15px 0 25px 0;
 }
 
 .container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+}
+
+.container h4{
+	font-size: 15px;
+	padding: 15px 0 10px 0;
+}
+
+.container h3{
+	font-size: 20px;
+}
+
+.container p{
+	font-size: 15px;
+	padding: 10px 0 30px 0;
+}
+
+.morebtn {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: #fce4e4;/*背景色*/
+	z-index: 500;
+}
+
+.btn01{
+	top: 1695px;
+	left: 440px;
+}
+
+.btn02{
+	top: 1695px;
+	left: 780px;
+}
+
+.btn03{
+	top: 1695px;
+	right: 220px;
+}
+
+.morebtn img{
+	padding-top:20px;
+	transition: 0.3s ease-in-out;
+}
+
+figure{
+	position: relative;
 }
 
 /*topicについて*/
@@ -115,16 +276,187 @@ a {
 	background: url(images/wave_white.png);
 	outline: none;
 	margin-top: 150px;
+	position: relative;
+	height: 858px;
+	font-family: "03スマートフォントUI";
+	font-weight: lighter;
 }
 
-.topic p {
+.topic .content_title{
+	position: absolute;
+	top: 100px;
+	right: 300px;
+	z-index: 10;
+}
+
+.description {
+	width: 600px;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 100px;
+	left: 170px;
+	z-index: 6;
+}
+
+.description img{
+	position: relative;
+}
+
+.description p{
+	position: absolute;
+	left: 110px;
 	font-family: kozuka-gothic-pro, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 
-.description {
-	display: flex;
+#topic .content-slide{
+	padding-top: 300px;
+}
+
+.idea{
+	display: inline-block;
+	text-align: center;
+}	
+
+.idea p{
+	font-size: 17px;
+	margin: 20px;
+}
+
+.idea01{
+	padding: 20px;
+	background-color: #d2fff2;
+}
+
+.idea .slick-image{
+	position: relative;
+	display: inline-block;
+	display: inline-block;
+	outline: 3px solid #222;
+}
+
+.enclosure{
+	position: absolute;
+	top: 559px;
+	left: px;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.btn,
+a.btn,
+button.btn {
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.5;
+	position: relative;
+	display: inline-block;
+	padding: 1rem 4rem;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	color: #212529;
+	border-radius: 0.5rem;
+	font-family: minion-pro, serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+a.btn-border {
+	margin-bottom: 12px;
+	padding: 0;
+
+	-webkit-transition: all 0.3s;
+
+	transition: all 0.3s;
+
+	border-radius: 0;
+}
+
+a.btn-border span {
+	position: relative;
+	display: block;
+	padding: 10px 45px;
+	color: #000;
+	border: 2px solid #000;
+	border-radius: 0.3rem;
+	background: #fff;
+}
+
+a.btn-border:before {
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+
+	display: block;
+
+	width: 100%;
+	height: 14px;
+
+	content: "";
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+
+	border: 2px solid #000;
+	border-top: 1px solid #000;
+	border-radius: 0 0 0.5rem 0.5rem;
+	background-image: -webkit-repeating-linear-gradient(
+		135deg,
+		#000,
+		#000 1px,
+		transparent 2px,
+		transparent 5px
+	);
+	background-image: repeating-linear-gradient(
+		-45deg,
+		#000,
+		#000 1px,
+		transparent 2px,
+		transparent 5px
+	);
+	background-size: 7px 7px;
+
+	-webkit-backface-visibility: hidden;
+
+	backface-visibility: hidden;
+}
+
+a.btn-border:hover {
+	-webkit-transform: translate(0, 3px);
+	transform: translate(0, 3px);
+}
+
+a.btn-border:hover:before {
+	bottom: -5px;
+}
+
+a.btn-border:active {
+	-webkit-transform: translate(0, 7px);
+	transform: translate(0, 7px);
+}
+
+a.btn-border:active:before {
+	bottom: -1px;
 }
 
 /*recommendについて*/
@@ -132,28 +464,85 @@ a {
 	outline: none;
 	text-align: center;
 	margin-top: 150px;
+	background: url(images/balloon.png);
+	background-repeat: no-repeat;
+	font-size: 30px;
+	height: 900px;
 }
 
-.primary {}
+.line_title{
+	top: 3160px;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	display: inline-block;
+}
+
+.line_title_h3{
+	font-family: "03スマートフォントUI";
+	font-weight: lighter;
+	font-size: 35px;
+}
+
+.line_title_h4{
+	font-family: "03スマートフォントUI";
+	font-weight: lighter;
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+.line{
+	padding: 60px 0 30px 0;
+	position: relative;
+}
+
+.primary {
+	
+}
 
 .upper {
-	display: inline-flex;
-	justify-content: space-around;
+	display: flex;
 }
 
 .lower {
-	display: inline-flex;
-	justify-content: space-around;
+	display: flex;
 }
 
-.number {
+.box{
+	position: relative;
+	margin: 0 auto;
+}
+.number{
 	position: absolute;
+	top: 60px;
+	left:-60px;
 }
 
 .frame {}
 
 /*footerについて*/
-.footer {
+footer {
 	background: #d0fff0;
+	padding: 15px;
+	outline: 1px solid #222;
 	text-align: center;
+}
+
+footer p{
+	font-size: 15px;
+	padding-top: 8px;
+}
+
+footer #pagetop.in {
+	bottom: -10px;
+}
+
+footer #pagetop {
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	right: 28px;
+	bottom: -100px;
+	z-index: 100;
+	transition: 0.5s ease-in-out;
 }

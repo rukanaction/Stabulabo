@@ -7,9 +7,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>スタバラボ</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="js/slick-theme.css" rel="stylesheet" type="text/css">
+	<link href="js/slick.css" rel="stylesheet" type="text/css">
 
 	<!--faviconの設定-->
 	<link rel="icon" href="images/nav_icon01.png">
+
+	<!--jQueryのCDN-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!--jsの読み込み-->
+	<script src="/js/jquery.js"></script>
+	<script src="/js/common.js"></script>
+
+	<!--slickについて-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+
+	<!--fuwatについて-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.fuwat').css('visibility', 'hidden');
+			$(window).scroll(function() {
+				var windowHeight = $(window).height(),
+					topWindow = $(window).scrollTop();
+				$('.fuwat').each(function() {
+					var objectPosition = $(this).offset().top;
+					if (topWindow > objectPosition - windowHeight + 200) {
+						$(this).addClass("fuwatAnime");
+					}
+				});
+			});
+		});
+	</script>
 
 	<!--フォントの設定-->
 	<!--A-OTF 太ゴB101 Pr6N-->
@@ -76,117 +106,329 @@
 		})(document);
 	</script>
 
+	<!--Minion Pro Regularについて-->
+	<script>
+		(function(d) {
+			var config = {
+					kitId: 'scc1uds',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function() {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function() {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+
 </head>
 
 <body>
 	<header>
-		<div class="wave"><img src="images/nav.png" alt="wave" width="100%"></div>
-		<div class="top wrapper">
-			<nav>
-				<ul>
-					<div>
-						<img src="images/nav_icon01.png" alt="" width="80">
-						<li><a href="#about">スタバラボについて</a></li>
-					</div>
-					<div>
-						<img src="images/nav_icon02.png" alt="" width="80">
-						<li><a href="#feeling">今の気分は？</a></li>
-					</div>
-					<div>
-						<img src="images/nav_icon03.png" alt="" width="80">
-						<li><a href="#topic">ツウなはなし</a></li>
-					</div>
-					<div>
-						<img src="images/nav_icon04.png" alt="" width="80">
-						<li><a href="#recommend">季節のおすすめ</a></li>
-					</div>
-
+		<div class="wave">
+			<img src="images/nav.png" alt="wave" width="100%">
+		</div>
+		<div class="top wrapper bg-slider">
+			<nav id="gNav">
+				<ul class="pcOnly">
+					<li class="list list01">
+						<a href="#about">
+							<img class="move" src="images/nav_icon01.png" alt="スタバラボについて" width="60">
+							<span class="txt">スタバラボについて</span>
+						</a>
+					</li>
+					<li class="list list02">
+						<a href="#feeling">
+							<img class="move" src="images/nav_icon02.png" alt="今の気分は？" width="60">
+							<span class="txt">今の気分は？</span>
+						</a>
+					</li>
+					<li class="list list03">
+						<a href="#topic">
+							<img class="move" src="images/nav_icon03.png" alt="ツウなはなし" width="60">
+							<span class="txt">ツウなはなし</span>
+						</a>
+					</li>
+					<li class="list list04">
+						<a href="#recommend">
+							<img class="move" src="images/nav_icon04.png" alt="季節のおすすめ" width="60">
+							<span class="txt">季節のおすすめ</span>
+						</a>
+					</li>
 				</ul>
 			</nav>
+
+			<div class="slider">
+				<div class="space">
+					<img src="images/science_01.png" alt="" width="100">
+				</div>
+				<div class="space">
+					<img src="images/science_02.png" alt="" width="100">
+				</div>
+				<div class="space">
+					<img src="images/science_03.png" alt="" width="100">
+				</div>
+				<div class="space">
+					<img src="images/science_04.png" alt="" width="100">
+				</div>
+				<div class="space">
+					<img src="images/science_05.png" alt="" width="100">
+				</div>
+				<div class="space">
+					<img src="images/science_06.png" alt="" width="100">
+				</div>
+				<div class="space">
+					<img src="images/science_07.png" alt="" width="100">
+				</div>
+			</div>
+			<script type="text/javascript">
+				$('.slider').slick({
+					centerMode: true,
+					autoplaySpeed: 800,
+					slidesToShow: 5,
+					cssEase: 'linear',
+					autoplay: true,
+					dots: false,
+					arrows: false,
+					responsive: [{
+							breakpoint: 768,
+							settings: {
+								arrows: false,
+								centerMode: true,
+								spaceBetween: '400px',
+								centerPadding: '40px',
+								slidesToShow: 3
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								arrows: false,
+								centerMode: true,
+								centerPadding: '40px',
+								slidesToShow: 1
+							}
+						}
+					]
+				});
+			</script>
+
 			<div class="logo">
 				<img src="images/logo.png" alt="" width="130">
 			</div>
+			<div class="frappuccino">
+				<img src="images/frappucino.png" alt="" width="300">
+			</div>
 		</div>
+
 	</header>
 	<main>
-		<section class="about wrapper" id="about">
+		<section class="about wrapper fuwat" id="about">
 			<h2><span class="outline">スタバラボ</span>って？</h2>
 			<p>「スターバックスのメニューって多すぎて分かりづらい」<br>
 				「おすすめのカスタマイズを教えてほしい！」など<br>
 				あなたの悩みから生まれた <span class="underline">あなただけの一杯</span> を研究している研究所。<br>
 				カスタマイズ辞典や知っていたらちょっとツウになれちゃうような話など<br>
 				あなただけのとっておきの一杯をご提案します。</p>
+			<img class=icon01 src="images/about_01.png" alt="" width="80">
+			<img class=icon02 src="images/about_02.png" alt="" width="45">
 		</section>
-		<section class="feeling wrapper" id="feeling">
-			<h3>How are you feeling now?</h3>
-			<h2>今の気分は？</h2>
-			<h3>ビバレッジを今の気分に合わせて
-				カスタマイズしてみませんか？</h3>
+		<section class="feeling wrapper fuwat" id="feeling">
+			<div class="feeling_title">
+				<h3>How are you feeling now?</h3>
+				<h2>今の気分は？</h2>
+				<h4>ビバレッジを今の気分に合わせて<br>
+					カスタマイズしてみませんか？</h4>
+			</div>
+
 			<div class="container">
 				<div class="travel">
+					<span class="morebtn btn01">
+						<img src="images/detail.png" alt="詳しく見る" width="70">
+					</span>
+					<figure>
+						<img src="images/feeling_01.png" alt="" width="280">
+					</figure>
 					<h4>TRAVEL</h4>
 					<h3>休日のお出かけ</h3>
-					<p>久しぶりの休日のお出かけの楽しい時間と共に。</p>
+					<p>久しぶりの休日のお出かけの<br>楽しい時間と共に。</p>
 				</div>
+
 				<div class="home">
+					<span class="morebtn btn02">
+						<img src="images/detail.png" alt="詳しく見る" width="70">
+					</span>
+					<figure>
+						<img src="images/feeling_02.png" alt="" width="280">
+					</figure>
 					<h4>HOME</h4>
 					<h3>家でまったり</h3>
-					<p>家で久しぶりの休日を過ごす時間と共に。</p>
+					<p>家で久しぶりの休日を<br>過ごす時間と共に。</p>
 				</div>
+
 				<div class="work">
+					<span class="morebtn btn03">
+						<img src="images/detail.png" alt="詳しく見る" width="70">
+					</span>
+					<figure>
+						<img src="images/feeling_03.png" alt="" width="280">
+					</figure>
 					<h4>WORK</h4>
 					<h3>集中したい</h3>
-					<p>終わらせたい仕事や課題があるときと共に。</p>
+					<p>終わらせたい仕事や<br>課題があるときと共に。</p>
 				</div>
 			</div>
 		</section>
-		<section class="topic wrapper" id="topic">
+
+		<section class="topic wrapper fuwat" id="topic">
+			<div class="content_title" data-active="true">
+				<div data-vertical-id="1" class="vertical-title">
+					<img src="images/topic_logo.png" alt="スタバラボのツウなはなし" height="350px">
+				</div>
+			</div>
 			<div class="description">
 				<img src="images/coffee_icon_01.png" alt="">
 				<p>知っていたらスタバツウになれるかも？<br>
 					知る人ぞ知る“ツウなはなし”を<br>
 					スタバラボだけで教えます。</p>
 			</div>
-		</section>
-		<section class="recommend wrapper" id="recommend">
-			<h3>RECCOMEND</h3>
-			<h4>寒い冬におすすめのカスタマイズを紹介</h4>
-			<div class="primary">
-				<div class="upper">
-					<div class="remommend_01">
-						<div class="number">
-							<img src="images/number_01.png" alt="">
+
+			<div class="content-slide" id="slick">
+				<div class="center">
+					<div class="idea idea01">
+						<div class="slick-image">
+							<img src="images/topic_01.png" alt="" width="500">
 						</div>
-						<img src="images/recommend_01.png" alt="">
+						<div class="enclosure">
+							<img src="images/idea_title_01.png" alt="" width="270">
+						</div>
+						<p>スターバックスラテに対し、ホットしかないカ<br>
+							プチーノ。いつも飲んでいてもその違いが分か<br>
+							らない人も多いはず…！</p>
+						<a class="btn btn-border">
+							<span>MORE</span>
+						</a>
 					</div>
-					<div class="remommend02">
-						<div class="number">
-							<img src="images/number_02.png" alt="">
+
+					<div class="idea idea01">
+						<div class="slick-image">
+							<img src="images/topic_01.png" alt="" width="500">
 						</div>
-						<img src="images/recommend_02.png" alt="">
+						<div class="enclosure">
+							<img src="images/idea_title_01.png" alt="" width="270">
+						</div>
+						<p>スターバックスラテに対し、ホットしかないカ<br>
+							プチーノ。いつも飲んでいてもその違いが分か<br>
+							らない人も多いはず…！</p>
+						<a class="btn btn-border">
+							<span>MORE</span>
+						</a>
+					</div>
+
+					<div class="idea idea01">
+						<div class="slick-image">
+							<img src="images/topic_01.png" alt="" width="500">
+						</div>
+						<div class="enclosure">
+							<img src="images/idea_title_01.png" alt="" width="270">
+						</div>
+						<p>スターバックスラテに対し、ホットしかないカ<br>
+							プチーノ。いつも飲んでいてもその違いが分か<br>
+							らない人も多いはず…！</p>
+						<a class="btn btn-border">
+							<span>MORE</span>
+						</a>
+					</div>
+
+					<div class="idea idea01">
+						<div class="slick-image">
+							<img src="images/topic_01.png" alt="" width="500">
+						</div>
+						<div class="enclosure">
+							<img src="images/idea_title_01.png" alt="" width="270">
+						</div>
+						<p>スターバックスラテに対し、ホットしかないカ<br>
+							プチーノ。いつも飲んでいてもその違いが分か<br>
+							らない人も多いはず…！</p>
+						<a class="btn btn-border">
+							<span>MORE</span>
+						</a>
 					</div>
 				</div>
-				<div class="lower">
-					<div class="remommend03">
+
+			</div>
+		</section>
+
+		<section class="recommend wrapper fuwat" id="recommend">
+			<div class="line_title">
+				<h3 class="line_title_h3">RECCOMEND</h3>
+				<h4 class="line_title_h4">寒い冬におすすめのカスタマイズを紹介</h4>
+			</div>
+			<div class="line">
+				<img src="images/line.png" alt="" width="500">
+			</div>
+
+			<div class="primary">
+				<div class="upper">
+					<div class="box remommend_01">
 						<div class="number">
-							<img src="images/number_03.png" alt="">
+							<img src="images/number_01.png" alt="" width="120">
 						</div>
-						<img src="images/recommend_03.png" alt="">
+						<img src="images/recommend_01.png" alt="" width="300">
 					</div>
-					<div class="remommend04">
+					<div class="box remommend02">
 						<div class="number">
-							<img src="images/number_04.png" alt="">
+							<img src="images/number_02.png" alt="" width="120">
 						</div>
-						<img src="images/recommend_04.png" alt="">
+						<img src="images/recommend_02.png" alt="" width="300">
+					</div>
+				</div>
+
+				<div class="lower">
+					<div class="box remommend03">
+						<div class="number">
+							<img src="images/number_03.png" alt="" width="120">
+						</div>
+						<img src="images/recommend_03.png" alt="" width="300">
+					</div>
+					<div class="box remommend04">
+						<div class="number">
+							<img src="images/number_04.png" alt="" width="120">
+						</div>
+						<img src="images/recommend_04.png" alt="" width="300">
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
-	<div class="footer wrapper">
-		<div class="footerlogo wrapper"><img src="images/footerlogo.png" alt="ロゴ" width="300"></div>
-		<p　class="footerlast">&copy; 2020 rukanaction. All Rights Reserved.</p>
-	</div>
+	<footer>
+		<div class="footerlogo">
+			<img src="images/footerlogo.png" alt="ロゴ" width="250">
+		</div>
+		<p>
+			&copy; 2020 rukanaction Inc. All Rights Reserved.
+		</p>
+		<a href="#wrap" id="pagetop" class="in">
+			<img src="images/pagetop.png" alt="pagetop" width="100">
+		</a>
+	</footer>
 </body>
 
 </html>
