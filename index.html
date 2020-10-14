@@ -3,12 +3,33 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<!--ビューポイントの設定-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>スタバラボ</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.scss">
+	
+	<!--slickについて-->
 	<link href="js/slick-theme.css" rel="stylesheet" type="text/css">
 	<link href="js/slick.css" rel="stylesheet" type="text/css">
+	
+	<!--swiperについて-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+	<!--モーダルについて-->
+	<!--
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<style>
+		#btn-close-modal {
+			width:100%;
+			text-align: center;
+			cursor:pointer;
+			color:#fff;
+		}
+
+	</style>
+-->
 
 	<!--faviconの設定-->
 	<link rel="icon" href="images/nav_icon01.png">
@@ -18,11 +39,12 @@
 
 	<!--jsの読み込み-->
 	<script src="/js/jquery.js"></script>
+	<!--
 	<script src="/js/common.js"></script>
+	-->
 
-	<!--slickについて-->
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="js/slick.min.js"></script>
+	<!--swiperについて-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
 
 	<!--fuwatについて-->
 	<script type="text/javascript">
@@ -40,6 +62,10 @@
 			});
 		});
 	</script>
+
+	<!--Modalについて-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 
 	<!--フォントの設定-->
 	<!--A-OTF 太ゴB101 Pr6N-->
@@ -137,6 +163,10 @@
 			s.parentNode.insertBefore(tk, s)
 		})(document);
 	</script>
+	
+	<!--slickについて-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
 
 </head>
 
@@ -201,10 +231,11 @@
 			<script type="text/javascript">
 				$('.slider').slick({
 					centerMode: true,
-					autoplaySpeed: 800,
+					speed: 2000,
 					slidesToShow: 5,
 					cssEase: 'linear',
 					autoplay: true,
+					autoplaySpeed: 0, //隣あう画像のスライドするまでの間隔時間
 					dots: false,
 					arrows: false,
 					responsive: [{
@@ -250,6 +281,7 @@
 			<img class=icon01 src="images/about_01.png" alt="" width="80">
 			<img class=icon02 src="images/about_02.png" alt="" width="45">
 		</section>
+
 		<section class="feeling wrapper fuwat" id="feeling">
 			<div class="feeling_title">
 				<h3>How are you feeling now?</h3>
@@ -257,7 +289,6 @@
 				<h4>ビバレッジを今の気分に合わせて<br>
 					カスタマイズしてみませんか？</h4>
 			</div>
-
 			<div class="container">
 				<div class="travel">
 					<span class="morebtn btn01">
@@ -310,6 +341,106 @@
 					スタバラボだけで教えます。</p>
 			</div>
 
+			<!--swiperについて-->
+			<section class="swiper-container loading">
+				<div class="swiper-wrapper">
+
+					<div class="swiper-slide" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLbVhsNzdIYmlfN1E)">
+						<img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img" />
+						<div class="content">
+							<p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Idea01 Matthews</p>
+							<span class="caption" data-swiper-parallax="-20%">スターバックスラテに対し、ホットしかないカプチーノ。いつも飲んでいてもその違いが分からない人も多いはず…！</span>
+						</div>
+					</div>
+					<div class="swiper-slide" style="background:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
+						<img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img" />
+						<div class="content">
+							<p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Idea02 Berry</p>
+							<span class="caption" data-swiper-parallax="-20%">日替わりで楽しめるスターバックスのドリップコーヒー。実はそのレシートに2杯目が110円になるお得な裏技が載っていた…？</span>
+						</div>
+					</div>
+					<div class="swiper-slide" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s)">
+						<img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img" />
+						<div class="content">
+							<p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Idea03 Pierce</p>
+							<span class="caption" data-swiper-parallax="-20%">寒い冬になると飲みたくなるホワイトモカやスターバックスラテなどのホットビバレッジ。実はビバレッジでミルクの温度が違うらしい…</span>
+						</div>
+					</div>
+					<div class="swiper-slide" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLVUpEems2ZXpHYVk)">
+						<img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLVUpEems2ZXpHYVk" class="entity-img" />
+						<div class="content">
+							<p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Idea04 Copeland</p>
+							<span class="caption" data-swiper-parallax="-20%">出勤時のドリップコーヒーなどスターバックスでの買い物は日常。実はドリンクが一杯無料になったり、新作のフラペチーノが先行購入できるらしい…？</span>
+						</div>
+					</div>
+					<div class="swiper-slide" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLNXBIcEdOUFVIWmM)">
+						<img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLNXBIcEdOUFVIWmM" class="entity-img" />
+						<div class="content">
+							<p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Idea05 Newman</p>
+							<span class="caption" data-swiper-parallax="-20%">友達への誕生日プレゼントはスターバックスのタンブラー。プレゼントをもらえるのは友達だけじゃなくて買った私もだった…？</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev swiper-button-white"></div>
+				<div class="swiper-button-next swiper-button-white"></div>
+			</section>
+
+			<script>
+				// Params
+				var sliderSelector = '.swiper-container',
+					options = {
+						init: false,
+						loop: true,
+						autoplay: true,
+						speed: 800,
+						slidesPerView: 2, // or 'auto'
+						// spaceBetween: 10,
+						centeredSlides: true,
+						effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+						coverflowEffect: {
+							rotate: 50, // Slide rotate in degrees
+							stretch: 0, // Stretch space between slides (in px)
+							depth: 100, // Depth offset in px (slides translate in Z axis)
+							modifier: 1, // Effect multipler
+							slideShadows: true, // Enables slides shadows
+						},
+						grabCursor: true,
+						parallax: true,
+						pagination: {
+							el: '.swiper-pagination',
+							clickable: true,
+						},
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						},
+						breakpoints: {
+							1023: {
+								slidesPerView: 1,
+								spaceBetween: 0
+							}
+						},
+						// Events
+						on: {
+							imagesReady: function() {
+								this.el.classList.remove('loading');
+							}
+						}
+					};
+				var mySwiper = new Swiper(sliderSelector, options);
+
+				// Initialize slider
+				mySwiper.init();
+			</script>
+			<!--swiperここまで-->
+
+
+
+			<!--
 			<div class="content-slide" id="slick">
 				<div class="center">
 					<div class="idea idea01">
@@ -372,8 +503,9 @@
 						</a>
 					</div>
 				</div>
+				</div>
+-->
 
-			</div>
 		</section>
 
 		<section class="recommend wrapper fuwat" id="recommend">
