@@ -430,6 +430,14 @@ figure {
 	font-style: normal;
 }
 
+.pc {
+	display: inline !important;
+}
+
+.vertical-title01 {
+	display: none !important;
+}
+
 #topic .content-slide {
 	padding-top: 300px;
 }
@@ -461,7 +469,6 @@ figure {
 	top: 400px;
 	left: px;
 }
-
 
 .md-btn-area {
 	margin-bottom: 50px;
@@ -749,15 +756,17 @@ a.btn-border:active:before {
 	-webkit-backface-visibility: hidden;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-.swiper_main{
+.swiper_main {
 	position: relative;
-	
+
 }
 
 .swiper-container {
@@ -771,25 +780,31 @@ a.btn-border:active:before {
 	top: 240px;
 	left: 10%;
 }
+
 .swiper-container.nav-slider {
 	width: 20%;
 	padding-left: 5px;
 }
+
 .swiper-container.nav-slider .swiper-slide {
 	cursor: pointer;
 	opacity: .4;
 	-webkit-transition: opacity .3s ease;
 	transition: opacity .3s ease;
 }
+
 .swiper-container.nav-slider .swiper-slide.swiper-slide-active {
 	opacity: 1;
 }
+
 .swiper-container.nav-slider .swiper-slide .content {
 	width: 100%;
 }
+
 .swiper-container.nav-slider .swiper-slide .content .title {
 	font-size: 20px;
 }
+
 .swiper-container:hover .swiper-button-prev,
 .swiper-container:hover .swiper-button-next {
 	-webkit-transform: translateX(0);
@@ -797,6 +812,7 @@ a.btn-border:active:before {
 	opacity: 1;
 	visibility: visible;
 }
+
 .swiper-container.loading {
 	opacity: 0;
 	visibility: hidden;
@@ -805,6 +821,7 @@ a.btn-border:active:before {
 .swiper-slide {
 	overflow: hidden;
 }
+
 .swiper-slide .slide-bgimg {
 	position: absolute;
 	top: 0;
@@ -814,9 +831,11 @@ a.btn-border:active:before {
 	background-position: center;
 	background-size: cover;
 }
+
 .swiper-slide .entity-img {
 	display: none;
 }
+
 .swiper-slide .content {
 	position: absolute;
 	top: 40%;
@@ -825,11 +844,13 @@ a.btn-border:active:before {
 	padding-left: 5%;
 	color: #fff;
 }
+
 .swiper-slide .content .title {
 	font-size: 2.6em;
 	font-weight: bold;
 	margin-bottom: 30px;
 }
+
 .swiper-slide .content .caption {
 	display: block;
 	font-size: 13px;
@@ -841,6 +862,7 @@ a.btn-border:active:before {
 	transition: opacity .3s ease, transform .7s ease;
 	transition: opacity .3s ease, transform .7s ease, -webkit-transform .7s ease;
 }
+
 .swiper-slide .content .caption.show {
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
@@ -862,6 +884,7 @@ a.btn-border:active:before {
 	-webkit-transform: translateX(-50px);
 	transform: translateX(-50px);
 }
+
 /*swiperここまで*/
 
 /*recommendについて*/
@@ -970,10 +993,11 @@ footer #pagetop {
 
 	/*bodyについて*/
 	body {
-		padding:
-			background-color: #e8e8e8;
-		font-family: "03スマートフォントUI";
-		font-weight: lighter;
+		padding: 25px;
+		background-color: #e8e8e8;
+		font-family: soleil, sans-serif;
+		font-weight: 300;
+		font-style: normal;
 		width: 100%;
 		padding: 25px;
 	}
@@ -1012,6 +1036,8 @@ footer #pagetop {
 	.top {
 		width: 100%;
 		height: 600px;
+		font-family: soleil, sans-serif;
+		font-style: normal;
 	}
 
 	/*navについて*/
@@ -1055,7 +1081,6 @@ footer #pagetop {
 		font-family: heisei-kaku-gothic-stdn, sans-serif;
 
 		font-weight: 500;
-
 		font-style: normal;
 		display: inline;
 		color: #ffffff;
@@ -1129,7 +1154,7 @@ footer #pagetop {
 		font-family: soleil, sans-serif;
 		font-weight: 300;
 		font-style: normal;
-		padding: 15px 0 0 0;
+		padding: 0;
 	}
 
 	.container h3 {
@@ -1142,7 +1167,7 @@ footer #pagetop {
 		font-family: tbchibirgothicplusk-pro, sans-serif;
 		font-weight: 400;
 		font-style: normal;
-		padding: 0 0 30px 0;
+		padding: 0 0 50px 0;
 	}
 
 	.morebtn {
@@ -1170,12 +1195,12 @@ footer #pagetop {
 	}
 
 	/*modalについて*/
-	.modal-inner{
+	.modal-inner {
 		width: 100%;
 		margin: 70px 0% 0%;
 	}
-	
-	.modal p{
+
+	.modal p {
 		width: 100%;
 		margin: 0;
 		font-family: tbchibirgothicplusk-pro, sans-serif;
@@ -1184,14 +1209,14 @@ footer #pagetop {
 		font-size: 15px;
 		padding: 7px 0 20px 0;
 	}
-	
-	.enclosure{
+
+	.enclosure {
 		position: static;
 		display: block;
 		text-align: left;
 	}
-	
-	.enclosure img{
+
+	.enclosure img {
 		padding-top: 10px;
 		width: 220px;
 	}
@@ -1203,20 +1228,67 @@ footer #pagetop {
 		background-image: none;
 		background-color: #ffffff;
 		outline: 1px solid #222;
+		height: 700px;
+		font-family: tbchibirgothicplusk-pro, sans-serif;
+		font-weight: 400;
+		font-style: normal;
 	}
-	
+
 	.description {
-		width: 600px;
+		width: 310px;
 		display: flex;
 		align-items: center;
 		position: absolute;
-		top: 120px;
-		left: 170px;
+		top: 150px;
+		left: 20px;
 		z-index: 6;
 	}
-	
+
 	.description img {
-		position: relative;
+		width: 90px;
+	}
+
+	.description p {
+		font-size: 12px;
+		left: 80px;
+	}
+
+	.topic .content_title {
+		position: absolute;
+		top: 80px;
+		right: 30px;
+		z-index: 10;
+	}
+
+	.vertical-title {
+		display: none;
+	}
+
+	.vertical-title01 {
+		display: inline !important;
+		position: absolute;
+		top: -50px;
+		right: -15px;
+	}
+	
+	.caption{
+		font-size: 13px;
+	}
+
+	.swiper-container {
+		height: 45vh;
+		top: 260px;
+		left: 10%;
+	}
+
+	.swiper-slide .content {
+		top: 10%;
+		width: 100%;
+	}
+
+	.swiper-slide .content .title {
+		margin-bottom: 150px;
+		font-size: 30px;
 	}
 
 	/*recommendについて*/
@@ -1226,6 +1298,8 @@ footer #pagetop {
 		background-image: none;
 		background-color: #d7edf1;
 		outline: 1px solid #222;
+		display: flex;
+		flex-direction: column;
 		height: auto;
 	}
 
@@ -1239,10 +1313,59 @@ footer #pagetop {
 		flex-direction: column;
 	}
 
+	.line{
+		display: none;
+	}
+	
+	.line_title {
+		top: 70px;
+	}
+
+	.line_title_h3 {
+		font-size: 25px;
+		top: 50px;
+		font-family: tbchibirgothicplusk-pro, sans-serif;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	.line_title_h4 {
+		font-size: 17px;
+		font-family: tbchibirgothicplusk-pro, sans-serif;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	.line img {
+		
+	}
+
+	.box {
+		
+	}
+	
+	.remommend_01{
+	margin-top: 140px;
+	}
+	
+	.box img {
+		width: 70%;
+	}
+	
+	.number {
+		top: 50px;
+		left:-10px;
+	}
+	
+	.number img{
+		width: 65%;
+	}
+
 	/*footerについて*/
 	footer {
 		width: 100%;
 		padding: 10px;
+		margin-top: 20px;
 	}
 
 	.footerlogo img {
@@ -1255,5 +1378,13 @@ footer #pagetop {
 		font-style: normal;
 		font-size: 10px;
 		padding-top: 3px;
+	}
+	
+	footer #pagetop {
+		width: 20px;
+		margin: 10px;
+		position: fixed;
+		right: 80px;
+		bottom: -100px;
 	}
 }

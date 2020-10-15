@@ -352,102 +352,104 @@
 
 <body>
 	<header>
-		<div class="wave">
-			<img src="images/nav.png" alt="wave" width="100%">
-		</div>
-		<div class="top wrapper bg-slider">
-			<nav id="gNav">
-				<ul class="pcOnly">
-					<li class="list list01">
-						<a href="#about">
-							<img class="move" src="images/nav_icon01.png" alt="スタバラボについて" width="60">
-							<span class="txt">スタバラボについて</span>
-						</a>
-					</li>
-					<li class="list list02">
-						<a href="#feeling">
-							<img class="move" src="images/nav_icon02.png" alt="今の気分は？" width="60">
-							<span class="txt">今の気分は？</span>
-						</a>
-					</li>
-					<li class="list list03">
-						<a href="#topic">
-							<img class="move" src="images/nav_icon03.png" alt="ツウなはなし" width="60">
-							<span class="txt">ツウなはなし</span>
-						</a>
-					</li>
-					<li class="list list04">
-						<a href="#recommend">
-							<img class="move" src="images/nav_icon04.png" alt="季節のおすすめ" width="60">
-							<span class="txt">季節のおすすめ</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
+		<a href="#stabulabo" id="pagetop">
+			<div class="wave">
+				<img src="images/nav.png" alt="wave" width="100%">
+			</div>
+			<div class="top wrapper bg-slider">
+				<nav id="gNav">
+					<ul class="pcOnly">
+						<li class="list list01">
+							<a href="#about">
+								<img class="move" src="images/nav_icon01.png" alt="スタバラボについて" width="60">
+								<span class="txt">スタバラボについて</span>
+							</a>
+						</li>
+						<li class="list list02">
+							<a href="#feeling">
+								<img class="move" src="images/nav_icon02.png" alt="今の気分は？" width="60">
+								<span class="txt">今の気分は？</span>
+							</a>
+						</li>
+						<li class="list list03">
+							<a href="#topic">
+								<img class="move" src="images/nav_icon03.png" alt="ツウなはなし" width="60">
+								<span class="txt">ツウなはなし</span>
+							</a>
+						</li>
+						<li class="list list04">
+							<a href="#recommend">
+								<img class="move" src="images/nav_icon04.png" alt="季節のおすすめ" width="60">
+								<span class="txt">季節のおすすめ</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
 
-			<div class="slider">
-				<div class="space">
-					<img src="images/science_01.png" alt="" width="100">
+				<div class="slider">
+					<div class="space">
+						<img src="images/science_01.png" alt="" width="100">
+					</div>
+					<div class="space">
+						<img src="images/science_02.png" alt="" width="100">
+					</div>
+					<div class="space">
+						<img src="images/science_03.png" alt="" width="100">
+					</div>
+					<div class="space">
+						<img src="images/science_04.png" alt="" width="100">
+					</div>
+					<div class="space">
+						<img src="images/science_05.png" alt="" width="100">
+					</div>
+					<div class="space">
+						<img src="images/science_06.png" alt="" width="100">
+					</div>
+					<div class="space">
+						<img src="images/science_07.png" alt="" width="100">
+					</div>
 				</div>
-				<div class="space">
-					<img src="images/science_02.png" alt="" width="100">
-				</div>
-				<div class="space">
-					<img src="images/science_03.png" alt="" width="100">
-				</div>
-				<div class="space">
-					<img src="images/science_04.png" alt="" width="100">
-				</div>
-				<div class="space">
-					<img src="images/science_05.png" alt="" width="100">
-				</div>
-				<div class="space">
-					<img src="images/science_06.png" alt="" width="100">
-				</div>
-				<div class="space">
-					<img src="images/science_07.png" alt="" width="100">
-				</div>
-			</div>
-			<script type="text/javascript">
-				$('.slider').slick({
-					centerMode: true,
-					speed: 2000,
-					slidesToShow: 5,
-					cssEase: 'linear',
-					autoplay: true,
-					autoplaySpeed: 0, //隣あう画像のスライドするまでの間隔時間
-					dots: false,
-					arrows: false,
-					responsive: [{
-							breakpoint: 768,
-							settings: {
-								arrows: false,
-								centerMode: true,
-								spaceBetween: '400px',
-								centerPadding: '40px',
-								slidesToShow: 3
+				<script type="text/javascript">
+					$('.slider').slick({
+						centerMode: true,
+						speed: 2000,
+						slidesToShow: 5,
+						cssEase: 'linear',
+						autoplay: true,
+						autoplaySpeed: 0, //隣あう画像のスライドするまでの間隔時間
+						dots: false,
+						arrows: false,
+						responsive: [{
+								breakpoint: 768,
+								settings: {
+									arrows: false,
+									centerMode: true,
+									spaceBetween: '400px',
+									centerPadding: '40px',
+									slidesToShow: 3
+								}
+							},
+							{
+								breakpoint: 480,
+								settings: {
+									arrows: false,
+									centerMode: true,
+									centerPadding: '40px',
+									slidesToShow: 2
+								}
 							}
-						},
-						{
-							breakpoint: 480,
-							settings: {
-								arrows: false,
-								centerMode: true,
-								centerPadding: '40px',
-								slidesToShow: 2
-							}
-						}
-					]
-				});
-			</script>
+						]
+					});
+				</script>
 
-			<div class="logo">
-				<img src="images/logo.png" alt="" width="130">
+				<div class="logo">
+					<img src="images/logo.png" alt="" width="130">
+				</div>
+				<div class="frappuccino">
+					<img src="images/frappucino.png" alt="" width="300">
+				</div>
 			</div>
-			<div class="frappuccino">
-				<img src="images/frappucino.png" alt="" width="300">
-			</div>
-		</div>
+		</a>
 
 	</header>
 	<main>
@@ -575,8 +577,13 @@
 		<section class="topic wrapper fuwat" id="topic">
 			<div class="content_title" data-active="true">
 				<div data-vertical-id="1" class="vertical-title">
-					<img src="images/topic_logo.png" alt="スタバラボのツウなはなし" height="350px">
+					<img src="images/topic_logo.png" alt="スタバラボのツウなはなし" height="350px" class="pc">
 				</div>
+
+				<div data-vertical-id="1" class="vertical-title01">
+					<img src="images/topic_logo_side.png" alt="スタバラボのツウなはなし" width="290px" 　class="mb">
+				</div>
+
 			</div>
 			<div class="description">
 				<img src="images/coffee_icon_01.png" alt="">
@@ -750,7 +757,9 @@
 		<section class="recommend wrapper fuwat" id="recommend">
 			<div class="line_title">
 				<h3 class="line_title_h3">RECCOMEND</h3>
-				<h4 class="line_title_h4">寒い冬におすすめのカスタマイズを紹介</h4>
+				<h4 class="line_title_h4">
+					<span class="ib">寒い冬におすすめの</span><span class="ib">カスタマイズを紹介</span>
+				</h4>
 			</div>
 			<div class="line">
 				<img src="images/line.png" alt="" width="500">
