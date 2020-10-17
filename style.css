@@ -548,7 +548,7 @@ figure {
 
 .sample-img {
 	position: relative;
-	outline: 3px solid #222;
+	outline: 2px solid #222;
 	width: 100%;
 }
 
@@ -558,7 +558,7 @@ figure {
 }
 
 .modal p {
-	padding-bottom: 20px;
+	padding: 10px 0;
 	font-style: normal;
 	font-size: 20px;
 	text-align: left;
