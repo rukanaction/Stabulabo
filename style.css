@@ -766,7 +766,6 @@ a.btn-border:active:before {
 
 .swiper_main {
 	position: relative;
-
 }
 
 .swiper-container {
@@ -838,9 +837,9 @@ a.btn-border:active:before {
 
 .swiper-slide .content {
 	position: absolute;
-	top: 40%;
+	top: 20%;
 	left: 0;
-	width: 50%;
+	width: 80%;
 	padding-left: 5%;
 	color: #fff;
 }
@@ -848,12 +847,12 @@ a.btn-border:active:before {
 .swiper-slide .content .title {
 	font-size: 2.6em;
 	font-weight: bold;
-	margin-bottom: 30px;
+	margin-bottom: 130px;
 }
 
 .swiper-slide .content .caption {
 	display: block;
-	font-size: 13px;
+	font-size: 20px;
 	line-height: 1.4;
 	-webkit-transform: translateX(50px);
 	transform: translateX(50px);
@@ -930,7 +929,7 @@ a.btn-border:active:before {
 }
 
 .line {
-	padding: 120px 0 30px 0;
+	padding: 100px 0 30px 0;
 	position: relative;
 }
 
@@ -938,15 +937,18 @@ a.btn-border:active:before {
 
 .upper {
 	display: flex;
+	justify-content: center;
 }
 
 .lower {
 	display: flex;
+	justify-content: center;
 }
 
 .box {
 	position: relative;
 	margin: 0 auto;
+	margin: 20px;
 }
 
 .number {
@@ -1228,7 +1230,7 @@ footer #pagetop {
 		background-image: none;
 		background-color: #ffffff;
 		outline: 1px solid #222;
-		height: 700px;
+		height: 750px;
 		font-family: tbchibirgothicplusk-pro, sans-serif;
 		font-weight: 400;
 		font-style: normal;
@@ -1276,9 +1278,10 @@ footer #pagetop {
 	}
 
 	.swiper-container {
-		height: 45vh;
+		width: 70%;
+		height: 55vh;
 		top: 260px;
-		left: 10%;
+		left: 5%;
 	}
 
 	.swiper-slide .content {
@@ -1287,8 +1290,12 @@ footer #pagetop {
 	}
 
 	.swiper-slide .content .title {
-		margin-bottom: 150px;
+		margin-bottom: 80px;
 		font-size: 30px;
+	}
+	
+	.swiper-slide .content .caption{
+		font-size: 13px;
 	}
 
 	/*recommendについて*/
@@ -1349,7 +1356,7 @@ footer #pagetop {
 	}
 	
 	.box img {
-		width: 70%;
+		width: 90%;
 	}
 	
 	.number {
