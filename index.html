@@ -8,9 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>スタバラボ</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="loading.css">
 	<link rel="stylesheet" href="style.scss">
 	<link rel="stylesheet" href="swiper.scss">
-	<link rel="stylesheet" href="default.scss">
+	<link rel="stylesheet" href="loading.scss">
 
 	<!--slickについて-->
 	<link href="js/slick-theme.css" rel="stylesheet" type="text/css">
@@ -27,9 +28,9 @@
 
 	<!--jsの読み込み-->
 	<script src="/js/jquery.js"></script>
-	<!--
-	<script src="/js/common.js"></script>
-	-->
+
+	<!--loadingについて-->
+	
 
 	<!--swiperについて-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
@@ -348,111 +349,114 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 
+	
+
 </head>
 
 <body>
-	<header>
-		<a href="#stabulabo" id="pagetop">
-			<div class="wave">
-				<img src="images/nav.png" alt="wave" width="100%">
-			</div>
-			<div class="top wrapper bg-slider">
-				<nav id="gNav">
-					<ul class="pcOnly">
-						<li class="list list01">
-							<a href="#about">
-								<img class="move" src="images/nav_icon01.png" alt="スタバラボについて" width="60">
-								<span class="txt">スタバラボについて</span>
-							</a>
-						</li>
-						<li class="list list02">
-							<a href="#feeling">
-								<img class="move" src="images/nav_icon02.png" alt="今の気分は？" width="60">
-								<span class="txt">今の気分は？</span>
-							</a>
-						</li>
-						<li class="list list03">
-							<a href="#topic">
-								<img class="move" src="images/nav_icon03.png" alt="ツウなはなし" width="60">
-								<span class="txt">ツウなはなし</span>
-							</a>
-						</li>
-						<li class="list list04">
-							<a href="#recommend">
-								<img class="move" src="images/nav_icon04.png" alt="季節のおすすめ" width="60">
-								<span class="txt">季節のおすすめ</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
-
-				<div class="slider" dir="rtl">
-					<div class="space">
-						<img src="images/science_01.png" alt="" width="100">
-					</div>
-					<div class="space">
-						<img src="images/science_02.png" alt="" width="100">
-					</div>
-					<div class="space">
-						<img src="images/science_03.png" alt="" width="100">
-					</div>
-					<div class="space">
-						<img src="images/science_04.png" alt="" width="100">
-					</div>
-					<div class="space">
-						<img src="images/science_05.png" alt="" width="100">
-					</div>
-					<div class="space">
-						<img src="images/science_06.png" alt="" width="100">
-					</div>
-					<div class="space">
-						<img src="images/science_07.png" alt="" width="100">
-					</div>
+		<header>
+			<a href="#stabulabo" id="pagetop">
+				<div class="wave">
+					<img src="images/nav.png" alt="wave" width="100%">
 				</div>
-				<script type="text/javascript">
-					$('.slider').slick({
-						centerMode: true,
-						speed: 2000,
-						slidesToShow: 5,
-						cssEase: 'linear',
-						autoplay: true,
-						autoplaySpeed: 0, //隣あう画像のスライドするまでの間隔時間
-						dots: false,
-						arrows: false,
-						rtl: true,
-						responsive: [{
-								breakpoint: 768,
-								settings: {
-									arrows: false,
-									centerMode: true,
-									spaceBetween: '400px',
-									centerPadding: '40px',
-									slidesToShow: 3
+				<div class="top wrapper bg-slider">
+					<nav id="gNav">
+						<ul class="pcOnly">
+							<li class="list list01">
+								<a href="#about">
+									<img class="move" src="images/nav_icon01.png" alt="スタバラボについて" width="60">
+									<span class="txt">スタバラボについて</span>
+								</a>
+							</li>
+							<li class="list list02">
+								<a href="#feeling">
+									<img class="move" src="images/nav_icon02.png" alt="今の気分は？" width="60">
+									<span class="txt">今の気分は？</span>
+								</a>
+							</li>
+							<li class="list list03">
+								<a href="#topic">
+									<img class="move" src="images/nav_icon03.png" alt="ツウなはなし" width="60">
+									<span class="txt">ツウなはなし</span>
+								</a>
+							</li>
+							<li class="list list04">
+								<a href="#recommend">
+									<img class="move" src="images/nav_icon04.png" alt="季節のおすすめ" width="60">
+									<span class="txt">季節のおすすめ</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="slider" dir="rtl">
+						<div class="space">
+							<img src="images/science_01.png" alt="" width="100">
+						</div>
+						<div class="space">
+							<img src="images/science_02.png" alt="" width="100">
+						</div>
+						<div class="space">
+							<img src="images/science_03.png" alt="" width="100">
+						</div>
+						<div class="space">
+							<img src="images/science_04.png" alt="" width="100">
+						</div>
+						<div class="space">
+							<img src="images/science_05.png" alt="" width="100">
+						</div>
+						<div class="space">
+							<img src="images/science_06.png" alt="" width="100">
+						</div>
+						<div class="space">
+							<img src="images/science_07.png" alt="" width="100">
+						</div>
+					</div>
+					<script type="text/javascript">
+						$('.slider').slick({
+							centerMode: true,
+							speed: 2000,
+							slidesToShow: 5,
+							cssEase: 'linear',
+							autoplay: true,
+							autoplaySpeed: 0, //隣あう画像のスライドするまでの間隔時間
+							dots: false,
+							arrows: false,
+							rtl: true,
+							responsive: [{
+									breakpoint: 768,
+									settings: {
+										arrows: false,
+										centerMode: true,
+										spaceBetween: '400px',
+										centerPadding: '40px',
+										slidesToShow: 3
+									}
+								},
+								{
+									breakpoint: 480,
+									settings: {
+										arrows: false,
+										centerMode: true,
+										centerPadding: '40px',
+										slidesToShow: 2
+									}
 								}
-							},
-							{
-								breakpoint: 480,
-								settings: {
-									arrows: false,
-									centerMode: true,
-									centerPadding: '40px',
-									slidesToShow: 2
-								}
-							}
-						]
-					});
-				</script>
+							]
+						});
+					</script>
 
-				<div class="logo">
-					<img src="images/logo.png" alt="" width="130">
+					<div class="logo">
+						<img src="images/logo.png" alt="" width="130">
+					</div>
+					<div class="frappuccino">
+						<img src="images/frappucino.png" alt="" width="280">
+					</div>
 				</div>
-				<div class="frappuccino">
-					<img src="images/frappucino.png" alt="" width="300">
-				</div>
-			</div>
-		</a>
+			</a>
 
-	</header>
+		</header>
+
 	<main>
 		<section class="about wrapper fuwat" id="about">
 			<h2><span class="outline">スタバラボ</span>って？</h2>
@@ -524,14 +528,12 @@
 			<section id="feeling-one" class="modal">
 				<div class="modal-inner">
 					<div class="img_box">
-						<img src="images/topic_01.png" alt="pic" class="sample-img">
-						<div class="enclosure">
-							<img src="images/idea_title_01.png" alt="" width="270">
-						</div>
+						<img src="images/feeling_img01.png" alt="pic" class="sample-img">
 					</div>
 					<!--<h2>ラテとカプチーノの違いって？</h2>-->
-					<p>スターバックスラテに対し、ホットしかないカプチーノ。いつも飲んでいてもその違いが分からない人も多いはず…！</p>
-					<a class="btn btn-border" href="https://dyf.starbucks.co.jp/detail/?id=1184">
+					<p>シトラス果肉のフルーティーさ×バニラのまろやかさで柔らかい
+						みかんヨーグルトのような味わいに！</p>
+					<a class="btn btn-border" href="https://product.starbucks.co.jp/beverage/frappuccino/4524785165939/">
 						<span>MORE</span>
 					</a>
 				</div>
@@ -542,14 +544,11 @@
 			<section id="feeling-two" class="modal">
 				<div class="modal-inner">
 					<div class="img_box">
-						<img src="images/topic_01.png" alt="pic" class="sample-img">
-						<div class="enclosure">
-							<img src="images/idea_title_01.png" alt="" width="270">
-						</div>
+						<img src="images/feeling_img02.png" alt="pic" class="sample-img">
 					</div>
 					<!--<h2>ラテとカプチーノの違いって？</h2>-->
-					<p>スターバックスラテに対し、ホットしかないカプチーノ。いつも飲んでいてもその違いが分からない人も多いはず…！</p>
-					<a class="btn btn-border" href="https://dyf.starbucks.co.jp/detail/?id=1184">
+					<p>アールグレイの香りと甘党におすすめのホワイトモカシロップの相性は抜群！オールミルクで贅沢な休日に。</p>
+					<a class="btn btn-border" href="https://product.starbucks.co.jp/beverage/tea/4524785140653/">
 						<span>MORE</span>
 					</a>
 				</div>
@@ -560,14 +559,11 @@
 			<section id="feeling-three" class="modal">
 				<div class="modal-inner">
 					<div class="img_box">
-						<img src="images/topic_01.png" alt="pic" class="sample-img">
-						<div class="enclosure">
-							<img src="images/idea_title_01.png" alt="" width="270">
-						</div>
+						<img src="images/feeling_img03.png" alt="pic" class="sample-img">
 					</div>
 					<!--<h2>ラテとカプチーノの違いって？</h2>-->
-					<p>スターバックスラテに対し、ホットしかないカプチーノ。いつも飲んでいてもその違いが分からない人も多いはず…！</p>
-					<a class="btn btn-border" href="https://dyf.starbucks.co.jp/detail/?id=1184">
+					<p>豊かなエスプレッソの香りとアイスクリームのような濃厚さがマッチ！ホイップクリーム追加で少し贅沢に頑張るときを応援してくれるフラペチーノ。</p>
+					<a class="btn btn-border" href="https://product.starbucks.co.jp/beverage/frappuccino/4524785344143/">
 						<span>MORE</span>
 					</a>
 				</div>
@@ -622,7 +618,7 @@
 							<div class="content">
 								<p class="title">Idea 03</p>
 								<span class="caption" data-swiper-parallax-x="30%" data-swiper-parallax-opacity="0">スターバックスラテに対し、ホットしかないカプチーノ。スターバックスラテはエスプレッソにスチームミルクを注ぎ、フォームミルクをトッピングしたビバレッジなのに対し、カプチーノはエスプレッソに一気にミルクを注いだビバレッジ。ちなみにカフェ
-								ミスとはドリップコーヒーにスチームミルクを半分加えたビバレッジ。</span>
+									ミスとはドリップコーヒーにスチームミルクを半分加えたビバレッジ。</span>
 							</div>
 						</div>
 						<div class="swiper-slide">
@@ -867,6 +863,9 @@
 			<img src="images/pagetop.png" alt="pagetop" width="100">
 		</a>
 	</footer>
+	
+	<!--loadingについて-->
+
 </body>
 
 </html>
